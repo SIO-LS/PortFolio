@@ -1,0 +1,125 @@
+/* Réinitialisation des marges et des rembourrages pour assurer une base cohérente */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles de base pour le corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex; /* Permet aux éléments de s'aligner en ligne */
+}
+
+/* Styles pour la barre de navigation latérale à gauche */
+nav {
+    background-color: #333;
+    color: #fff;
+    width: 300px; /* Largeur de la barre de navigation */
+    padding: 10px;
+    text-align: center;
+    position: fixed; /* Fixe la barre de navigation à la gauche de l'écran */
+    top: 0; /* Place la barre de navigation en haut de la fenêtre */
+    left: 0; /* Place la barre de navigation tout à gauche de la fenêtre */
+    height: 100%; /* Occupe toute la hauteur de l'écran */
+}
+
+.blocs-menu {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blocs-menu span {
+    font-size: 19px;
+    text-align: center;
+    position: relative;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.nav-menu-item {
+    font-size: 19px;
+    text-align: center;
+    position: relative;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.nav-menu-item a {
+    display: block; /* Place chaque lien sur une nouvelle ligne */
+    text-decoration: none;
+    color: #fff;
+    position: relative; /* Ajoutez une position relative pour l'élément a */
+}
+
+.nav-menu-item a::after {
+    content: ''; /* Ajoutez un contenu vide */
+    display: block;
+    width: 0; /* Largeur initiale de la ligne à 0 */
+    height: 2px; /* Hauteur de la ligne en dessous de l'élément */
+    background-color: #fff; /* Couleur de la ligne (peut être modifiée selon vos préférences) */
+    position: absolute; /* Position absolue par rapport à l'élément a */
+    left: 50%; /* Positionne la ligne au milieu de l'élément */
+    bottom: -2px; /* Déplace la ligne en dessous de l'élément */
+    transition: all 0.2s ease-out;
+}
+
+/* Style "hover" pour les éléments du menu */
+.nav-menu-item a:hover::after {
+    width: 100%; /* Fait grandir la ligne à 100% de la largeur de l'élément a au survol */
+    left: 0; /* Ramène la ligne au début de l'élément */
+}
+
+/* Styles pour les sections en pleine hauteur */
+.section-plein-ecran {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -------------------------------------------------------------------------------------------------------------- */
+/* Styles pour le contenu principal à droite de la barre de navigation */
+
+.content {
+    margin-left: 320px; /* Laisse un espace pour la barre de navigation */
+    padding: 20px;
+    flex: 1; /* Permet au contenu de remplir l'espace restant */
+}
+
+/* Styles pour les en-têtes */
+header {
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+/* Styles pour les liens dans le pied de page */
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Styles pour le titre h1 */
+h1 {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 60px;
+    font-weight: bold; /* Mettre le texte en gras */
+    position: absolute;
+    top: 50%; /* Placer le titre à la moitié de la hauteur de l'écran */
+    transform: translateY(-50%); /* Centrer verticalement le titre */
+    left: 20px; /* Placer le titre à 20 pixels de la gauche de l'écran */
+}
+
+
+/* Styles pour les titres h2*/
+h2 {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 60px;
+}
